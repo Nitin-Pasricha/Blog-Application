@@ -1,14 +1,12 @@
 <h1 class='title' style = "text-transform:capitalize;"><%= @article.title %></h1>
 
-
-
 <div class='item' style='min-height: 200px; line-height:1.6; width:70vw; font-size: 1rem; text-align:justify'>
-<% if @article.header_image.present? %>
-<div class='img-container'>
-    <%= image_tag(@article.header_image, width:400) %>
-</div>
-<% end %>
-<%= @article.body %>
+    <% if @article.header_image.present? %>
+        <div class='img-container'>
+            <%= image_tag(@article.header_image, width:400) %>
+        </div>
+    <% end %>
+    <%= @article.body %>
 </div>
 
 <div class='btn-container'>
